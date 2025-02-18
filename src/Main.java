@@ -7,7 +7,7 @@ public class Main {
         for (int x=0; x<100; x++){
             numero += nueve;
         }
-        
+        numero = "8";
         boolean repetir = true;
         boolean suma = false;
         int numSeleccionado;
@@ -16,6 +16,21 @@ public class Main {
         String numFinal = "";
 
         //suma 1 al número
+        
+        //Para el caso que solo tenga un dígito
+        if(maxLongitud == 1){
+            numSeleccionado = Integer.parseInt(numero);
+            if(numSeleccionado == 9){
+                numFinal = "10";
+            }
+            else{
+                numSeleccionado++;
+                numFinal += numSeleccionado;
+            }
+            repetir = false;
+        }
+        
+        //Para el caso que tenga mínimo 2 dígitos
         while (repetir){
             longitud--;
             numSeleccionado = Integer.parseInt(numero.substring(longitud, longitud+1));
