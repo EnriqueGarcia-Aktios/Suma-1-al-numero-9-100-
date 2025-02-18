@@ -45,10 +45,6 @@ public class Main {
                     numSeleccionado = 10;
                     suma = true;
                 }
-                else{
-                    numSeleccionado ++;
-                    suma = false;
-                }
                 repetir = false;
             }
             numFinal = numSeleccionado + numFinal;
